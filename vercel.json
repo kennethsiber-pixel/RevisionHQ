@@ -1,6 +1,13 @@
 {
-  "cleanUrls": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/app.js",
+      "destination": "https://raw.githubusercontent.com/kennethsiber-pixel/RevisionHQ/37b40a2c92d73a90aad9734eb51b0bf15a3e9fe8/app.js"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
