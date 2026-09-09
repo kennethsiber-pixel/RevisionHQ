@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="color-scheme" content="dark" />
+  <title>Revision HQ — Lucas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-row">
+        <div class="brand-mark">RHQ</div>
+        <div class="brand-copy"><strong>Revision HQ</strong><span>Lucas · A Level 2027</span></div>
+      </div>
+
+      <nav class="nav" aria-label="Revision HQ navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-glyph">01</span><span>Command Centre</span></button>
+        <button class="nav-item" data-view="subjects"><span class="nav-glyph">02</span><span>Subjects</span></button>
+        <button class="nav-item" data-view="deepdive"><span class="nav-glyph">03</span><span>Deep Dive</span></button>
+        <button class="nav-item" data-view="cards"><span class="nav-glyph">04</span><span>Cards</span></button>
+        <button class="nav-item" data-view="planner"><span class="nav-glyph">05</span><span>Planner</span></button>
+        <button class="nav-item" data-view="mastery"><span class="nav-glyph">06</span><span>Mastery</span></button>
+      </nav>
+
+      <div class="sidebar-panel">
+        <p class="mini-label">THE RULE</p>
+        <p>Retrieve first.<br>Check second.<br>Repair only the gap.</p>
+      </div>
+      <div class="save-state"><span class="save-dot"></span> <span id="saveStateLabel">Saved locally · Google not connected</span></div>
+          <div style="font-size:9px;color:#5f6d7f;margin:8px 5px 0;letter-spacing:.08em">BUILD 3.1 · TUTOR PLANNER</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div>
+          <p class="eyebrow" id="viewKicker">REVISION HQ</p>
+          <h1 id="viewTitle">Command Centre</h1>
+        </div>
+        <div class="top-actions">
+          <div class="streak-chip"><span>STREAK</span><strong id="streakTop">6 days</strong></div>
+          <button class="primary-btn" id="topStart">Start revision</button>
+        </div>
+      </header>
+
+      <section class="view active" id="overview">
+        <div class="hero-grid">
+          <article class="hero-card">
+            <div>
+              <p class="eyebrow warm">NEXT MOVE</p>
+              <h2 id="heroTitle">History: Charles I & Personal Rule</h2>
+              <p id="heroCopy">Your weakest high-value topic. Start with a closed-book retrieval, then repair the gaps.</p>
+            </div>
+            <div class="hero-footer">
+              <button class="primary-btn" id="heroStart">Begin Deep Dive</button>
+              <div class="hero-meta"><span>25–35 min</span><span>High priority</span></div>
+            </div>
+          </article>
+
+          <article class="exam-card">
+            <p class="eyebrow">SUMMER 2027</p>
+            <div class="exam-count"><strong id="daysToSeason">250</strong><span>days to exam season</span></div>
+            <div class="exam-rule"></div>
+            <p>Three subjects. One system. No passive rereading.</p>
+          </article>
+        </div>
+
+        <div class="metric-grid" id="metricGrid"></div>
+
+        <div class="dashboard-grid">
+          <article class="panel priority-panel">
+            <div class="panel-head">
+              <div><p class="eyebrow">PRIORITY STACK</p><h3>Do these next</h3></div>
+              <span class="status-pill">adaptive</span>
+            </div>
+            <div id="priorityStack" class="priority-stack"></div>
+          </article>
+
+          <article class="panel week-panel">
+            <div class="panel-head"><div><p class="eyebrow">THIS WEEK</p><h3>Revision rhythm</h3></div><strong id="weeklyMinutes">205 min</strong></div>
+            <div class="week-chart" id="weekChart"></div>
+            <div class="week-foot"><span>Target: 5 focused sessions</span><span id="weekDone">4 complete</span></div>
+          </article>
+
+          <article class="panel today-panel">
+            <div class="panel-head"><div><p class="eyebrow">TODAY</p><h3>Small enough to finish</h3></div><span id="todayProgress">1 / 3</span></div>
+            <div id="todayTasks" class="today-tasks"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="subjects">
+        <div class="section-intro">
+          <p class="eyebrow">SUBJECT MAP</p>
+          <h2>Your actual courses.</h2>
+          <p>Everything in Revision HQ rolls up to these specifications. Confidence is topic-level, not a vague subject score.</p>
+        </div>
+        <div class="subject-grid" id="subjectGrid"></div>
+        <div class="topic-drawer" id="topicDrawer" hidden></div>
+      </section>
+
+      <section class="view" id="deepdive">
+        <div class="section-intro compact">
+          <p class="eyebrow">DEEP DIVE</p>
+          <h2>Think before you look.</h2>
+          <p>Built to make copying useless: retrieval first, source check second, correction third.</p>
+        </div>
+
+        <div class="deep-layout">
+          <article class="panel deep-main">
+            <div class="deep-topline">
+              <div>
+                <span class="subject-tag" id="deepSubject">OCR HISTORY H505 · Y108</span>
+                <h3 id="deepTopic">Charles I & Personal Rule, 1629–1640</h3>
+              </div>
+              <div class="step-counter"><span id="deepStepNum">1</span> / 3</div>
+            </div>
+
+            <div class="deep-step active" data-step="1">
+              <p class="step-kicker">STEP 1 · CLOSED BOOK</p>
+              <h4>What can you retrieve without looking?</h4>
+              <p class="deep-prompt" id="deepPrompt">Why did Charles I's Personal Rule create serious political and financial tension by 1640?</p>
+              <textarea id="brainDump" spellcheck="true" placeholder="Write from memory. Bullet points are fine. The point is retrieval, not beautiful notes."></textarea>
+              <div class="anti-copy"><span>✦</span><p><strong>No source text yet.</strong> Revision HQ reveals the evidence only after you commit an answer.</p></div>
+              <button class="primary-btn" id="commitRecall">Commit answer & check</button>
+            </div>
+
+            <div class="deep-step" data-step="2">
+              <p class="step-kicker">STEP 2 · CHECK</p>
+              <h4>Compare your recall with the anchors.</h4>
+              <div class="anchor-list" id="anchorList"></div>
+              <label class="gap-label" for="gapBox">What did you miss or get wrong?</label>
+              <textarea id="gapBox" placeholder="Write only the gaps. Don't rewrite everything."></textarea>
+              <button class="primary-btn" id="commitRepair">Build repair card</button>
+            </div>
+
+            <div class="deep-step" data-step="3">
+              <p class="step-kicker">STEP 3 · APPLY</p>
+              <h4>Now turn knowledge into an exam move.</h4>
+              <div class="exam-question" id="examQuestion">“Financial weakness was the main reason Charles I's Personal Rule collapsed.” Assess this view.</div>
+              <textarea id="examPlan" placeholder="Plan only: judgement + 3 argument blocks + the best evidence for each."></textarea>
+              <div class="confidence-row"><span>How secure does this feel now?</span><div id="confidenceButtons"></div></div>
+              <button class="primary-btn" id="finishDive">Finish Deep Dive</button>
+            </div>
+          </article>
+
+          <aside class="deep-side">
+            <article class="panel session-panel">
+              <p class="eyebrow">SESSION</p>
+              <div class="session-timer" id="sessionTimer">25:00</div>
+              <div class="timer-controls"><button class="small-btn" id="timerToggle">Start</button><button class="small-btn ghostish" id="timerReset">Reset</button></div>
+            </article>
+            <article class="panel objective-panel">
+              <p class="eyebrow">WHY THIS TOPIC?</p>
+              <p id="whyTopic">Low confidence + high exam value + not revisited recently.</p>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="cards">
+        <div class="section-intro compact">
+          <p class="eyebrow">CARDS</p>
+          <h2>Fast retrieval. Honest scoring.</h2>
+          <p>Cards are generated around examinable ideas and your repair gaps—not copied notes.</p>
+        </div>
+
+        <div class="cards-toolbar">
+          <div class="filter-tabs" id="cardFilters"></div>
+          <div class="due-count"><strong id="dueCount">8</strong><span>due</span></div>
+        </div>
+
+        <div class="card-stage">
+          <article class="flashcard" id="flashcard">
+            <div class="card-top"><span id="cardSubject">History</span><span id="cardIndex">1 / 8</span></div>
+            <div class="card-body">
+              <p class="card-label">PROMPT</p>
+              <h3 id="cardQuestion"></h3>
+              <div class="card-answer" id="cardAnswer" hidden></div>
+            </div>
+            <div class="card-footer" id="cardFooter">
+              <button class="primary-btn" id="revealCard">Reveal answer</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="planner">
+        <div class="section-intro compact planner-intro">
+          <div>
+            <p class="eyebrow">PLANNER</p>
+            <h2>One week at a time.</h2>
+            <p>Revision blocks, tutor sessions and calendar commitments in one view. Fixed commitments stay fixed; Revision HQ works around them.</p>
+          </div>
+          <button class="primary-btn" id="addTutor">+ Tutor session</button>
+        </div>
+
+        <div class="planner-toolbar panel">
+          <div class="week-nav">
+            <button class="icon-btn" id="prevWeek" aria-label="Previous week">←</button>
+            <div class="week-title"><span class="mini-label">WEEK</span><strong id="weekRange"></strong></div>
+            <button class="icon-btn" id="nextWeek" aria-label="Next week">→</button>
+            <button class="small-btn ghostish" id="todayWeek">This week</button>
+          </div>
+          <div class="calendar-connect">
+            <div class="calendar-copy">
+              <span class="calendar-dot" id="calendarDot"></span>
+              <div><strong id="calendarStatus">Google Calendar not connected</strong><span id="calendarHint">Tutor sessions can still be added manually.</span></div>
+            </div>
+            <div class="calendar-buttons"><button class="small-btn ghostish" id="calendarAction">Connect Google</button><button class="text-btn" id="calendarDisconnect" hidden>Disconnect</button></div>
+          </div>
+        </div>
+
+        <div class="planner-legend">
+          <span><i class="legend-swatch revision"></i>Revision</span>
+          <span><i class="legend-swatch tutor"></i>Tutor</span>
+          <span><i class="legend-swatch calendar"></i>Google Calendar</span>
+        </div>
+        <div class="planner-grid" id="plannerGrid"></div>
+      </section>
+
+      <section class="view" id="mastery">
+        <div class="section-intro compact">
+          <p class="eyebrow">MASTERY</p>
+          <h2>Evidence, not vibes.</h2>
+          <p>Confidence changes when you retrieve, apply and score—not because you clicked “read”.</p>
+        </div>
+        <div class="mastery-summary" id="masterySummary"></div>
+        <article class="panel mastery-panel">
+          <div class="panel-head"><div><p class="eyebrow">TOPIC MASTERY</p><h3>Across all specifications</h3></div><div class="legend"><span><i class="dot weak"></i>Weak</span><span><i class="dot building"></i>Building</span><span><i class="dot secure"></i>Secure</span></div></div>
+          <div id="masteryRows" class="mastery-rows"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+
+  <div class="modal-backdrop" id="tutorModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="tutorModalTitle">
+      <div class="modal-head">
+        <div><p class="eyebrow">PLANNER</p><h3 id="tutorModalTitle">Add tutor session</h3></div>
+        <button class="drawer-close" id="closeTutorModal" aria-label="Close">×</button>
+      </div>
+      <form id="tutorForm">
+        <input type="hidden" id="tutorId">
+        <div class="form-grid">
+          <label class="field full"><span>Tutor / session name</span><input id="tutorName" required placeholder="e.g. Sarah · History"></label>
+          <label class="field"><span>Subject</span><select id="tutorSubject"><option>History</option><option>English Language</option><option>Religious Studies</option><option>General</option></select></label>
+          <label class="field"><span>Date</span><input id="tutorDate" type="date" required></label>
+          <label class="field"><span>Start</span><input id="tutorStart" type="time" required></label>
+          <label class="field"><span>Duration</span><select id="tutorDuration"><option value="30">30 min</option><option value="45">45 min</option><option value="60" selected>60 min</option><option value="90">90 min</option><option value="120">120 min</option></select></label>
+          <label class="field full"><span>Location or video link</span><input id="tutorLocation" placeholder="Optional"></label>
+          <label class="field full"><span>Notes</span><textarea id="tutorNotes" rows="3" placeholder="What to cover, homework, questions…"></textarea></label>
+          <label class="field full" id="repeatField"><span>Repeat</span><select id="tutorRepeat"><option value="1">One session</option><option value="4">Weekly · 4 sessions</option><option value="8">Weekly · 8 sessions</option><option value="12">Weekly · 12 sessions</option></select></label>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="danger-btn" id="deleteTutor" hidden>Delete</button>
+          <div class="modal-actions-right"><button type="button" class="small-btn ghostish" id="cancelTutor">Cancel</button><button type="submit" class="primary-btn">Save session</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
