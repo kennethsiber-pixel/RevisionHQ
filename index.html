@@ -7,65 +7,95 @@
   <meta name="color-scheme" content="dark" />
   <title>Revision HQ — Lucas</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
   <div class="app-shell">
     <aside class="sidebar">
       <div class="brand-row">
-        <div class="brand-mark">RHQ</div>
-        <div class="brand-copy"><strong>Revision HQ</strong><span>Lucas · A Level 2027</span></div>
+        <div class="brand-mark" aria-label="Revision HQ"><span>R</span><i>H</i></div>
+        <div class="brand-copy">
+          <strong>Revision HQ</strong>
+          <span>HIGHER THINKING<br>BRIGHTER FUTURES</span>
+        </div>
       </div>
 
       <nav class="nav" aria-label="Revision HQ navigation">
-        <button class="nav-item active" data-view="overview"><span class="nav-glyph">01</span><span>Command Centre</span></button>
-        <button class="nav-item" data-view="subjects"><span class="nav-glyph">02</span><span>Subjects</span></button>
-        <button class="nav-item" data-view="deepdive"><span class="nav-glyph">03</span><span>Deep Dive</span></button>
-        <button class="nav-item" data-view="cards"><span class="nav-glyph">04</span><span>Cards</span></button>
-        <button class="nav-item" data-view="planner"><span class="nav-glyph">05</span><span>Planner</span></button>
-        <button class="nav-item" data-view="mastery"><span class="nav-glyph">06</span><span>Mastery</span></button>
+        <button class="nav-item active" data-view="overview"><span class="nav-glyph">⌂</span><span>Command Centre</span></button>
+        <button class="nav-item" data-view="subjects"><span class="nav-glyph">▤</span><span>Subjects</span></button>
+        <button class="nav-item" data-view="deepdive"><span class="nav-glyph">◎</span><span>Deep Dive</span></button>
+        <button class="nav-item" data-view="cards"><span class="nav-glyph">▱</span><span>Cards</span></button>
+        <button class="nav-item" data-view="planner"><span class="nav-glyph">□</span><span>Planner</span></button>
+        <button class="nav-item" data-view="mastery"><span class="nav-glyph">▥</span><span>Mastery</span></button>
       </nav>
 
+      <div class="sidebar-campus" aria-hidden="true"></div>
+      <div class="sidebar-quote">“A calmer mind<br>achieves more.”<span></span></div>
+
       <div class="sidebar-panel">
-        <p class="mini-label">THE RULE</p>
+        <p class="mini-label">THE METHOD</p>
         <p>Retrieve first.<br>Check second.<br>Repair only the gap.</p>
       </div>
       <div class="save-state"><span class="save-dot"></span> <span id="saveStateLabel">Saved locally · Google not connected</span></div>
-          <div style="font-size:9px;color:#5f6d7f;margin:8px 5px 0;letter-spacing:.08em">BUILD 3.3 · LOADER FIX</div>
+      <div class="build-mark">BUILD 3.4 · ACADEMIC EDITION</div>
     </aside>
 
     <main class="main">
       <header class="topbar">
         <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
-        <div>
+        <div class="topbar-left">
           <p class="eyebrow" id="viewKicker">REVISION HQ</p>
           <h1 id="viewTitle">Command Centre</h1>
+          <div class="topbar-strap" aria-hidden="true"><span>PLAN</span><span>FOCUS</span><span>REVISE</span><span>IMPROVE</span></div>
         </div>
-        <div class="top-actions">
-          <div class="streak-chip"><span>STREAK</span><strong id="streakTop">6 days</strong></div>
-          <button class="primary-btn" id="topStart">Start revision</button>
+        <div class="topbar-right">
+          <div class="topbar-upper">
+            <span class="latin-motto">Disciplina ducit ad libertatem.</span>
+            <span class="search-mark" aria-hidden="true">⌕</span>
+            <span class="avatar">L</span>
+            <span class="lucas-name">Lucas⌄</span>
+          </div>
+          <div class="topbar-lower">
+            <span id="headerDate">Thursday 10 September 2026</span>
+            <span class="header-separator"></span>
+            <span class="header-quote">“Small steps, significant results.”</span>
+          </div>
+          <div class="top-actions">
+            <div class="streak-chip"><span>STREAK</span><strong id="streakTop">6 days</strong></div>
+            <button class="primary-btn top-start" id="topStart">Start revision</button>
+          </div>
         </div>
       </header>
 
       <section class="view active" id="overview">
         <div class="hero-grid">
           <article class="hero-card">
-            <div>
+            <div class="hero-copy-block">
               <p class="eyebrow warm">NEXT MOVE</p>
               <h2 id="heroTitle">History: Charles I & Personal Rule</h2>
-              <p id="heroCopy">Your weakest high-value topic. Start with a closed-book retrieval, then repair the gaps.</p>
+              <p id="heroCopy">Explore the causes, key policies and the growing opposition to Charles I, 1629–1640.</p>
+              <div class="hero-footer">
+                <button class="primary-btn" id="heroStart">Begin Deep Dive <span>→</span></button>
+                <div class="hero-meta"><span>◷ &nbsp;25–35 min</span><span>◇ &nbsp;OCR History H505</span><span>▥ &nbsp;Build understanding</span></div>
+              </div>
             </div>
-            <div class="hero-footer">
-              <button class="primary-btn" id="heroStart">Begin Deep Dive</button>
-              <div class="hero-meta"><span>25–35 min</span><span>High priority</span></div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="hero-words">POWER<br>CONFLICT<br>RELIGION<br>LEGACY<span></span><b>HISTORY<br>SHAPES<br>THINKING</b></div>
             </div>
           </article>
 
           <article class="exam-card">
-            <p class="eyebrow">SUMMER 2027</p>
-            <div class="exam-count"><strong id="daysToSeason">250</strong><span>days to exam season</span></div>
+            <p class="eyebrow warm"><span class="calendar-mini">□</span> EXAM COUNTDOWN</p>
+            <h2>Summer 2027</h2>
             <div class="exam-rule"></div>
-            <p>Three subjects. One system. No passive rereading.</p>
+            <div class="countdown-grid">
+              <div><strong id="daysToSeason">250</strong><span>Days</span></div>
+              <div><strong id="countHours">00</strong><span>Hours</span></div>
+              <div><strong id="countMinutes">00</strong><span>Minutes</span></div>
+              <div><strong id="countSeconds">00</strong><span>Seconds</span></div>
+            </div>
+            <div class="exam-quote">“The future belongs to those<br>who prepare for it today.”</div>
           </article>
         </div>
 
@@ -74,22 +104,37 @@
         <div class="dashboard-grid">
           <article class="panel priority-panel">
             <div class="panel-head">
-              <div><p class="eyebrow">PRIORITY STACK</p><h3>Do these next</h3></div>
-              <span class="status-pill">adaptive</span>
+              <div><p class="panel-icon">◎</p><h3>Priority Stack</h3></div>
+              <span class="status-link">View all&nbsp; →</span>
             </div>
             <div id="priorityStack" class="priority-stack"></div>
           </article>
 
           <article class="panel week-panel">
-            <div class="panel-head"><div><p class="eyebrow">THIS WEEK</p><h3>Revision rhythm</h3></div><strong id="weeklyMinutes">205 min</strong></div>
+            <div class="panel-head">
+              <div><p class="panel-icon">▥</p><h3>Weekly Study Rhythm</h3></div>
+              <strong id="weeklyMinutes">205 min</strong>
+            </div>
             <div class="week-chart" id="weekChart"></div>
             <div class="week-foot"><span>Target: 5 focused sessions</span><span id="weekDone">4 complete</span></div>
+            <div class="week-quote">“Consistency compounds<br>into excellence.”</div>
           </article>
 
           <article class="panel today-panel">
-            <div class="panel-head"><div><p class="eyebrow">TODAY</p><h3>Small enough to finish</h3></div><span id="todayProgress">1 / 3</span></div>
+            <div class="panel-head">
+              <div><p class="panel-icon">□</p><h3>Today</h3></div>
+              <span id="todayProgress">1 / 3</span>
+            </div>
             <div id="todayTasks" class="today-tasks"></div>
           </article>
+        </div>
+
+        <div class="subject-strip">
+          <div class="subject-strip-title"><span>▤</span><strong>My Subjects</strong></div>
+          <div class="subject-chip english"><i></i><div><strong>AQA English Language 7702</strong><span>Language. Meaning. Perspectives.</span></div></div>
+          <div class="subject-chip history"><i></i><div><strong>OCR History H505</strong><span>People. Power. Consequence.</span></div></div>
+          <div class="subject-chip rs"><i></i><div><strong>AQA Religious Studies 7062</strong><span>Belief. Ethics. Modern Life.</span></div></div>
+          <button class="subject-strip-btn" onclick="document.querySelector('.nav-item[data-view=&quot;subjects&quot;]').click()">View Subjects&nbsp; →</button>
         </div>
       </section>
 
@@ -238,7 +283,6 @@
     </main>
   </div>
 
-
   <div class="modal-backdrop" id="tutorModal" hidden>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="tutorModalTitle">
       <div class="modal-head">
@@ -270,13 +314,33 @@
 (function(){
   const status=document.createElement('div');
   status.id='bootStatus';
-  status.style.cssText='position:fixed;left:270px;bottom:18px;z-index:9999;padding:8px 11px;border:1px solid #334152;border-radius:9px;background:#111923;color:#9aa6b6;font:11px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif';
+  status.style.cssText='position:fixed;left:245px;bottom:18px;z-index:9999;padding:8px 11px;border:1px solid #334152;border-radius:7px;background:#0b1721;color:#9aa6b6;font:11px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif';
   status.textContent='Revision HQ · starting…';
   document.body.appendChild(status);
-  fetch('/app.js?build=3.3',{cache:'no-store'})
+  fetch('/app.js?build=3.4',{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error('app.js HTTP '+r.status);return r.text();})
-    .then(code=>{(0,eval)(code);status.textContent='BUILD 3.3 · INTERACTIONS READY';setTimeout(()=>status.remove(),3500);})
+    .then(code=>{(0,eval)(code);status.textContent='BUILD 3.4 · INTERACTIONS READY';setTimeout(()=>status.remove(),3500);})
     .catch(err=>{status.style.color='#ffb0a8';status.style.borderColor='#70443f';status.textContent='Revision HQ failed to start: '+err.message;console.error(err);});
+})();
+</script>
+<script>
+(function(){
+  function updateHeader(){
+    const d=new Date();
+    const dateEl=document.getElementById('headerDate');
+    if(dateEl){dateEl.textContent=new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(d);}
+  }
+  function updateCountdown(){
+    const target=new Date('2027-05-17T09:00:00');
+    let diff=Math.max(0,target-Date.now());
+    const days=Math.floor(diff/86400000); diff%=86400000;
+    const hours=Math.floor(diff/3600000); diff%=3600000;
+    const minutes=Math.floor(diff/60000); diff%=60000;
+    const seconds=Math.floor(diff/1000);
+    const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=String(val).padStart(2,'0')};
+    set('daysToSeason',days);set('countHours',hours);set('countMinutes',minutes);set('countSeconds',seconds);
+  }
+  updateHeader();updateCountdown();setInterval(updateCountdown,1000);
 })();
 </script>
 </body>
