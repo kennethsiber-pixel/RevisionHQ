@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 760">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#172c39"/><stop offset=".52" stop-color="#0d1e29"/><stop offset="1" stop-color="#071018"/></linearGradient>
+ <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#26333a"/><stop offset="1" stop-color="#10191e"/></linearGradient>
+ <radialGradient id="lamp"><stop stop-color="#e4b85e" stop-opacity=".8"/><stop offset="1" stop-color="#e4b85e" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="480" height="760" fill="url(#sky)"/>
+<ellipse cx="330" cy="160" rx="260" ry="180" fill="#4a6877" opacity=".08"/>
+<g fill="#20343f" opacity=".45"><path d="M0 260L70 215l55 25 62-56 64 40 73-78 92 54 64-51v280H0z"/></g>
+<g transform="translate(25 258)">
+ <path d="M35 402V150h64V92h17V54h12V28h11v26h13v38h18v58h60V93h16V54h11V18h13v36h12v39h16v57h78v252z" fill="url(#stone)" stroke="#52616a" stroke-opacity=".42"/>
+ <path d="M64 150h95v252H64zM251 150h94v252h-94z" fill="#152128"/>
+ <g fill="#c49b52" opacity=".75"><rect x="82" y="190" width="13" height="35" rx="6"/><rect x="112" y="190" width="13" height="35" rx="6"/><rect x="142" y="190" width="13" height="35" rx="6"/><rect x="269" y="190" width="13" height="35" rx="6"/><rect x="299" y="190" width="13" height="35" rx="6"/><rect x="329" y="190" width="13" height="35" rx="6"/></g>
+ <g fill="#b18b49" opacity=".45"><rect x="83" y="257" width="12" height="31" rx="5"/><rect x="113" y="257" width="12" height="31" rx="5"/><rect x="143" y="257" width="12" height="31" rx="5"/><rect x="270" y="257" width="12" height="31" rx="5"/><rect x="300" y="257" width="12" height="31" rx="5"/><rect x="330" y="257" width="12" height="31" rx="5"/></g>
+ <path d="M159 402V300c0-52 60-52 60 0v102z" fill="#091116" stroke="#4d5b62"/><path d="M174 402v-91c0-28 31-28 31 0v91z" fill="#111b20"/>
+ <g stroke="#64727a" stroke-opacity=".35"><path d="M45 167h125M242 167h123M44 310h314"/><path d="M72 150v252M101 150v252M132 150v252M153 150v252M260 150v252M290 150v252M321 150v252M345 150v252"/></g>
+</g>
+<g fill="#071018"><path d="M0 720c73-45 128-35 188-17 65 20 112-13 160-19 62-7 95 14 132 36v40H0z"/><path d="M20 665c18-64 55-70 77 0zM84 685c14-56 42-65 64 0zM347 682c18-71 52-76 77 0z"/></g>
+<g opacity=".55"><circle cx="304" cy="480" r="58" fill="url(#lamp)"/><circle cx="304" cy="480" r="5" fill="#efc56d"/></g>
+<rect width="480" height="760" fill="none" stroke="#7b929c" stroke-opacity=".12"/>
+</svg>
