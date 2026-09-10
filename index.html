@@ -1,168 +1,68 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#080b12" />
-  <meta name="color-scheme" content="dark" />
-  <title>Revision HQ — Lucas</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="theme.css?v=5001" />
-  <style>
-    .hero-art{background:none!important;overflow:hidden!important}
-    .hero-art>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:57% 49%!important;display:block!important;opacity:1!important;z-index:0!important}
-    .hero-art:after{z-index:1!important}
-    .hero-words{z-index:4!important}
-    .sidebar-campus{background:none!important;overflow:hidden!important;position:relative!important}
-    .sidebar-campus>img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 52%!important;display:block!important;opacity:1!important}
-    .sidebar-campus:after{z-index:1!important}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06111a">
+<title>Revision HQ — Lucas</title>
+<link rel="stylesheet" href="app-clean.css?v=6000">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand-row">
-        <div class="brand-mark" aria-label="Revision HQ"><span>R</span><i>H</i></div>
-        <div class="brand-copy">
-          <strong>Revision HQ</strong>
-          <span>HIGHER THINKING<br>BRIGHTER FUTURES</span>
-        </div>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="rh"><span>R</span><i>H</i></div><h2>Revision HQ</h2><p>HIGHER THINKING<br>BRIGHTER FUTURES</p></div>
+    <nav>
+      <button class="nav active" data-view="overview">⌂ <span>Command Centre</span></button>
+      <button class="nav" data-view="subjects">▤ <span>Subjects</span></button>
+      <button class="nav" data-view="deepdive">◎ <span>Deep Dive</span></button>
+      <button class="nav" data-view="cards">▱ <span>Cards</span></button>
+      <button class="nav" data-view="planner">□ <span>Planner</span></button>
+      <button class="nav" data-view="mastery">▥ <span>Mastery</span></button>
+    </nav>
+    <div class="campus"><img src="assets/campus-premium.webp" alt=""></div>
+    <div class="quote">“A calmer mind<br>achieves more.”<b></b></div>
+    <div class="method"><small>THE METHOD</small><p>Retrieve first.<br>Check second.<br>Repair only the gap.</p></div>
+    <div class="saved"><span></span> Saved locally</div>
+    <div class="build">BUILD 6.0 · CLEAN CORE</div>
+  </aside>
+
+  <main>
+    <header class="topbar">
+      <div><div class="kicker" id="viewKicker">REVISION HQ</div><h1 id="viewTitle">Command Centre</h1><div class="strap">PLAN&nbsp;&nbsp;&nbsp;&nbsp; FOCUS&nbsp;&nbsp;&nbsp;&nbsp; REVISE&nbsp;&nbsp;&nbsp;&nbsp; IMPROVE</div></div>
+      <div class="top-right"><div class="motto">Disciplina ducit ad libertatem. &nbsp;⌕&nbsp; <span class="avatar">L</span> Lucas⌄</div><div class="date-row"><span id="headerDate"></span><i></i><em>“Small steps, significant results.”</em></div><div class="top-actions"><span><small>STREAK</small><b id="streakTop">6 days</b></span><button id="topStart">Start revision</button></div></div>
+    </header>
+
+    <section class="view active" id="overview">
+      <div class="hero-grid">
+        <article class="hero">
+          <div class="hero-copy"><div class="eyebrow">NEXT MOVE</div><h2>History: Charles I &amp;<br>Personal Rule</h2><p>Explore the causes, key policies and the growing opposition to Charles I, 1629–1640.</p><button id="heroStart">Begin Deep Dive <span>→</span></button><div class="hero-meta">◷ 25–35 min &nbsp;&nbsp; ◇ OCR History H505 &nbsp;&nbsp; ▥ Build understanding</div></div>
+          <div class="hero-image"><img id="charlesHeroImg" src="assets/charles-i-hero.webp" alt="Charles I in a candlelit study"><div class="fade"></div><div class="hero-words">POWER<br>CONFLICT<br>RELIGION<br>LEGACY<hr>HISTORY<br>SHAPES<br>THINKING</div></div>
+        </article>
+        <article class="countdown"><img src="assets/campus-premium.webp" alt=""><div class="count-overlay"></div><div class="count-content"><div class="eyebrow">□ &nbsp;EXAM COUNTDOWN</div><h2>Summer 2027</h2><hr><div class="count-grid"><div><b id="daysToSeason">248</b><span>Days</span></div><div><b id="countHours">00</b><span>Hours</span></div><div><b id="countMinutes">00</b><span>Minutes</span></div><div><b id="countSeconds">00</b><span>Seconds</span></div></div><blockquote>“The future belongs to those<br>who prepare for it today.”</blockquote></div></article>
       </div>
-
-      <nav class="nav" aria-label="Revision HQ navigation">
-        <button class="nav-item active" data-view="overview"><span class="nav-glyph">⌂</span><span>Command Centre</span></button>
-        <button class="nav-item" data-view="subjects"><span class="nav-glyph">▤</span><span>Subjects</span></button>
-        <button class="nav-item" data-view="deepdive"><span class="nav-glyph">◎</span><span>Deep Dive</span></button>
-        <button class="nav-item" data-view="cards"><span class="nav-glyph">▱</span><span>Cards</span></button>
-        <button class="nav-item" data-view="planner"><span class="nav-glyph">□</span><span>Planner</span></button>
-        <button class="nav-item" data-view="mastery"><span class="nav-glyph">▥</span><span>Mastery</span></button>
-      </nav>
-
-      <div class="sidebar-campus" aria-hidden="true"><img src="assets/campus-premium.webp?v=5001" alt="" decoding="async"></div>
-      <div class="sidebar-quote">“A calmer mind<br>achieves more.”<span></span></div>
-
-      <div class="sidebar-panel">
-        <p class="mini-label">THE METHOD</p>
-        <p>Retrieve first.<br>Check second.<br>Repair only the gap.</p>
+      <div class="metrics" id="metricGrid"></div>
+      <div class="dashboard">
+        <article class="panel priority"><header><h3>◎ &nbsp;Priority Stack</h3><span>View all →</span></header><div id="priorityStack"></div></article>
+        <article class="panel today"><header><h3>□ &nbsp;Today</h3><span id="todayProgress">1 / 3</span></header><div id="todayTasks"></div></article>
+        <article class="panel rhythm"><header><h3>▥ &nbsp;Weekly Study Rhythm</h3><span id="weeklyMinutes">205 min</span></header><div class="bars" id="weekChart"></div><div class="week-foot"><span>Target: 5 focused sessions</span><span>4 complete</span></div><blockquote>“Consistency compounds<br>into excellence.”</blockquote></article>
       </div>
-      <div class="save-state"><span class="save-dot"></span> <span id="saveStateLabel">Saved locally · Google not connected</span></div>
-      <div class="build-mark">BUILD 5.1 · CLEAN IMAGE RELEASE</div>
-    </aside>
+      <div class="subjects-strip"><strong>▤ &nbsp; My Subjects</strong><div><i class="blue"></i><b>AQA English Language 7702</b><span>Language. Meaning. Perspectives.</span></div><div><i class="gold"></i><b>OCR History H505</b><span>People. Power. Consequence.</span></div><div><i class="purple"></i><b>AQA Religious Studies 7062</b><span>Belief. Ethics. Modern Life.</span></div><button id="subjectsButton">View Subjects →</button></div>
+    </section>
 
-    <main class="main">
-      <header class="topbar">
-        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
-        <div class="topbar-left">
-          <p class="eyebrow" id="viewKicker">REVISION HQ</p>
-          <h1 id="viewTitle">Command Centre</h1>
-          <div class="topbar-strap" aria-hidden="true"><span>PLAN</span><span>FOCUS</span><span>REVISE</span><span>IMPROVE</span></div>
-        </div>
-        <div class="topbar-right">
-          <div class="topbar-upper">
-            <span class="latin-motto">Disciplina ducit ad libertatem.</span>
-            <span class="search-mark" aria-hidden="true">⌕</span>
-            <span class="avatar">L</span>
-            <span class="lucas-name">Lucas⌄</span>
-          </div>
-          <div class="topbar-lower">
-            <span id="headerDate">Thursday 10 September 2026</span>
-            <span class="header-separator"></span>
-            <span class="header-quote">“Small steps, significant results.”</span>
-          </div>
-          <div class="top-actions">
-            <div class="streak-chip"><span>STREAK</span><strong id="streakTop">6 days</strong></div>
-            <button class="primary-btn top-start" id="topStart">Start revision</button>
-          </div>
-        </div>
-      </header>
+    <section class="view" id="subjects"><div class="section-head"><div class="eyebrow">SUBJECT MAP</div><h2>Your actual courses.</h2><p>Confidence is topic-level, not a vague subject score.</p></div><div class="subject-grid" id="subjectGrid"></div><div id="topicDrawer" class="topic-drawer" hidden></div></section>
 
-      <section class="view active" id="overview">
-        <div class="hero-grid">
-          <article class="hero-card">
-            <div class="hero-copy-block">
-              <p class="eyebrow warm">NEXT MOVE</p>
-              <h2 id="heroTitle">History: Charles I & Personal Rule</h2>
-              <p id="heroCopy">Explore the causes, key policies and the growing opposition to Charles I, 1629–1640.</p>
-              <div class="hero-footer">
-                <button class="primary-btn" id="heroStart">Begin Deep Dive <span>→</span></button>
-                <div class="hero-meta"><span>◷ &nbsp;25–35 min</span><span>◇ &nbsp;OCR History H505</span><span>▥ &nbsp;Build understanding</span></div>
-              </div>
-            </div>
-            <div class="hero-art" aria-hidden="true"><img id="charlesHeroImage" src="assets/charles-i-hero.webp?v=5001" alt="" decoding="sync" fetchpriority="high"><div class="hero-words">POWER<br>CONFLICT<br>RELIGION<br>LEGACY<span></span><b>HISTORY<br>SHAPES<br>THINKING</b></div></div>
-          </article>
+    <section class="view" id="deepdive"><div class="section-head"><div class="eyebrow">DEEP DIVE</div><h2>Think before you look.</h2><p>Retrieve first. Check second. Repair only the gap.</p></div><div class="deep-layout"><article class="panel deep-main"><div class="deep-top"><div><span id="deepSubject">OCR HISTORY H505 · Y108</span><h3 id="deepTopic">Charles I &amp; Personal Rule, 1629–1640</h3></div><b><span id="deepStepNum">1</span> / 3</b></div><div class="deep-step active" data-step="1"><small>STEP 1 · CLOSED BOOK</small><h4>What can you retrieve without looking?</h4><p id="deepPrompt">Why did Charles I's Personal Rule create serious political and financial tension by 1640?</p><textarea id="brainDump" placeholder="Write from memory. Bullet points are fine."></textarea><button id="commitRecall">Commit answer &amp; check</button></div><div class="deep-step" data-step="2"><small>STEP 2 · CHECK</small><h4>Compare your recall with the anchors.</h4><div id="anchorList"></div><textarea id="gapBox" placeholder="Write only the gaps you missed."></textarea><button id="commitRepair">Build repair card</button></div><div class="deep-step" data-step="3"><small>STEP 3 · APPLY</small><h4>Turn knowledge into an exam move.</h4><div class="exam-q" id="examQuestion">“Financial weakness was the main reason Charles I's Personal Rule collapsed.” Assess this view.</div><textarea id="examPlan" placeholder="Judgement + 3 argument blocks + evidence."></textarea><div id="confidenceButtons" class="confidence"></div><button id="finishDive">Finish Deep Dive</button></div></article><aside><article class="panel timer"><small>SESSION</small><strong id="sessionTimer">25:00</strong><div><button id="timerToggle">Start</button><button id="timerReset" class="ghost">Reset</button></div></article><article class="panel why"><small>WHY THIS TOPIC?</small><p>Low confidence + high exam value + not revisited recently.</p></article></aside></div></section>
 
-          <article class="exam-card">
-            <p class="eyebrow warm"><span class="calendar-mini">□</span> EXAM COUNTDOWN</p>
-            <h2>Summer 2027</h2>
-            <div class="exam-rule"></div>
-            <div class="countdown-grid">
-              <div><strong id="daysToSeason">250</strong><span>Days</span></div>
-              <div><strong id="countHours">00</strong><span>Hours</span></div>
-              <div><strong id="countMinutes">00</strong><span>Minutes</span></div>
-              <div><strong id="countSeconds">00</strong><span>Seconds</span></div>
-            </div>
-            <div class="exam-quote">“The future belongs to those<br>who prepare for it today.”</div>
-          </article>
-        </div>
+    <section class="view" id="cards"><div class="section-head"><div class="eyebrow">CARDS</div><h2>Fast retrieval. Honest scoring.</h2><p>Cards focus on examinable ideas and repair gaps—not copied notes.</p></div><div class="card-wrap"><article class="panel flash"><header><span id="cardSubject">History</span><span id="cardIndex">1 / 8</span></header><small>PROMPT</small><h3 id="cardQuestion"></h3><div id="cardAnswer" class="answer" hidden></div><footer id="cardFooter"><button id="revealCard">Reveal answer</button></footer></article></div></section>
 
-        <div class="metric-grid" id="metricGrid"></div>
+    <section class="view" id="planner"><div class="section-head planner-head"><div><div class="eyebrow">PLANNER</div><h2>One week at a time.</h2><p>Keep revision realistic around fixed commitments.</p></div><button id="addTutor">+ Tutor session</button></div><div class="planner-controls panel"><button id="prevWeek">←</button><strong id="weekRange"></strong><button id="nextWeek">→</button><button id="todayWeek" class="ghost">This week</button></div><div id="plannerGrid" class="planner-grid"></div></section>
 
-        <div class="dashboard-grid">
-          <article class="panel priority-panel">
-            <div class="panel-head">
-              <div><p class="panel-icon">◎</p><h3>Priority Stack</h3></div>
-              <span class="status-link">View all&nbsp; →</span>
-            </div>
-            <div id="priorityStack" class="priority-stack"></div>
-          </article>
+    <section class="view" id="mastery"><div class="section-head"><div class="eyebrow">MASTERY</div><h2>Evidence, not vibes.</h2><p>Confidence changes when you retrieve, apply and score.</p></div><div id="masterySummary" class="mastery-summary"></div><article class="panel"><div id="masteryRows" class="mastery-rows"></div></article></section>
+  </main>
+</div>
 
-          <article class="panel week-panel">
-            <div class="panel-head">
-              <div><p class="panel-icon">▥</p><h3>Weekly Study Rhythm</h3></div>
-              <strong id="weeklyMinutes">205 min</strong>
-            </div>
-            <div class="week-chart" id="weekChart"></div>
-            <div class="week-foot"><span>Target: 5 focused sessions</span><span id="weekDone">4 complete</span></div>
-            <div class="week-quote">“Consistency compounds<br>into excellence.”</div>
-          </article>
-
-          <article class="panel today-panel">
-            <div class="panel-head">
-              <div><p class="panel-icon">□</p><h3>Today</h3></div>
-              <span id="todayProgress">1 / 3</span>
-            </div>
-            <div id="todayTasks" class="today-tasks"></div>
-          </article>
-        </div>
-
-        <div class="subject-strip">
-          <div class="subject-strip-title"><span>▤</span><strong>My Subjects</strong></div>
-          <div class="subject-chip english"><i></i><div><strong>AQA English Language 7702</strong><span>Language. Meaning. Perspectives.</span></div></div>
-          <div class="subject-chip history"><i></i><div><strong>OCR History H505</strong><span>People. Power. Consequence.</span></div></div>
-          <div class="subject-chip rs"><i></i><div><strong>AQA Religious Studies 7062</strong><span>Belief. Ethics. Modern Life.</span></div></div>
-          <button class="subject-strip-btn" onclick="document.querySelector('.nav-item[data-view=&quot;subjects&quot;]').click()">View Subjects&nbsp; →</button>
-        </div>
-      </section>
-
-      <section class="view" id="subjects"><div class="section-intro"><p class="eyebrow">SUBJECT MAP</p><h2>Your actual courses.</h2><p>Everything in Revision HQ rolls up to these specifications. Confidence is topic-level, not a vague subject score.</p></div><div class="subject-grid" id="subjectGrid"></div><div class="topic-drawer" id="topicDrawer" hidden></div></section>
-      <section class="view" id="deepdive"><div class="section-intro compact"><p class="eyebrow">DEEP DIVE</p><h2>Think before you look.</h2><p>Built to make copying useless: retrieval first, source check second, correction third.</p></div><div class="deep-layout"><article class="panel deep-main"><div class="deep-topline"><div><span class="subject-tag" id="deepSubject">OCR HISTORY H505 · Y108</span><h3 id="deepTopic">Charles I & Personal Rule, 1629–1640</h3></div><div class="step-counter"><span id="deepStepNum">1</span> / 3</div></div><div class="deep-step active" data-step="1"><p class="step-kicker">STEP 1 · CLOSED BOOK</p><h4>What can you retrieve without looking?</h4><p class="deep-prompt" id="deepPrompt">Why did Charles I's Personal Rule create serious political and financial tension by 1640?</p><textarea id="brainDump" spellcheck="true" placeholder="Write from memory. Bullet points are fine. The point is retrieval, not beautiful notes."></textarea><div class="anti-copy"><span>✦</span><p><strong>No source text yet.</strong> Revision HQ reveals the evidence only after you commit an answer.</p></div><button class="primary-btn" id="commitRecall">Commit answer & check</button></div><div class="deep-step" data-step="2"><p class="step-kicker">STEP 2 · CHECK</p><h4>Compare your recall with the anchors.</h4><div class="anchor-list" id="anchorList"></div><label class="gap-label" for="gapBox">What did you miss or get wrong?</label><textarea id="gapBox" placeholder="Write only the gaps. Don't rewrite everything."></textarea><button class="primary-btn" id="commitRepair">Build repair card</button></div><div class="deep-step" data-step="3"><p class="step-kicker">STEP 3 · APPLY</p><h4>Now turn knowledge into an exam move.</h4><div class="exam-question" id="examQuestion">“Financial weakness was the main reason Charles I's Personal Rule collapsed.” Assess this view.</div><textarea id="examPlan" placeholder="Plan only: judgement + 3 argument blocks + the best evidence for each."></textarea><div class="confidence-row"><span>How secure does this feel now?</span><div id="confidenceButtons"></div></div><button class="primary-btn" id="finishDive">Finish Deep Dive</button></div></article><aside class="deep-side"><article class="panel session-panel"><p class="eyebrow">SESSION</p><div class="session-timer" id="sessionTimer">25:00</div><div class="timer-controls"><button class="small-btn" id="timerToggle">Start</button><button class="small-btn ghostish" id="timerReset">Reset</button></div></article><article class="panel objective-panel"><p class="eyebrow">WHY THIS TOPIC?</p><p id="whyTopic">Low confidence + high exam value + not revisited recently.</p></article></aside></div></section>
-      <section class="view" id="cards"><div class="section-intro compact"><p class="eyebrow">CARDS</p><h2>Fast retrieval. Honest scoring.</h2><p>Cards are generated around examinable ideas and your repair gaps—not copied notes.</p></div><div class="cards-toolbar"><div class="filter-tabs" id="cardFilters"></div><div class="due-count"><strong id="dueCount">8</strong><span>due</span></div></div><div class="card-stage"><article class="flashcard" id="flashcard"><div class="card-top"><span id="cardSubject">History</span><span id="cardIndex">1 / 8</span></div><div class="card-body"><p class="card-label">PROMPT</p><h3 id="cardQuestion"></h3><div class="card-answer" id="cardAnswer" hidden></div></div><div class="card-footer" id="cardFooter"><button class="primary-btn" id="revealCard">Reveal answer</button></div></article></div></section>
-      <section class="view" id="planner"><div class="section-intro compact planner-intro"><div><p class="eyebrow">PLANNER</p><h2>One week at a time.</h2><p>Revision blocks, tutor sessions and calendar commitments in one view. Fixed commitments stay fixed; Revision HQ works around them.</p></div><button class="primary-btn" id="addTutor">+ Tutor session</button></div><div class="planner-toolbar panel"><div class="week-nav"><button class="icon-btn" id="prevWeek" aria-label="Previous week">←</button><div class="week-title"><span class="mini-label">WEEK</span><strong id="weekRange"></strong></div><button class="icon-btn" id="nextWeek" aria-label="Next week">→</button><button class="small-btn ghostish" id="todayWeek">This week</button></div><div class="calendar-connect"><div class="calendar-copy"><span class="calendar-dot" id="calendarDot"></span><div><strong id="calendarStatus">Google Calendar not connected</strong><span id="calendarHint">Tutor sessions can still be added manually.</span></div></div><div class="calendar-buttons"><button class="small-btn ghostish" id="calendarAction">Connect Google</button><button class="text-btn" id="calendarDisconnect" hidden>Disconnect</button></div></div></div><div class="planner-legend"><span><i class="legend-swatch revision"></i>Revision</span><span><i class="legend-swatch tutor"></i>Tutor</span><span><i class="legend-swatch calendar"></i>Google Calendar</span></div><div class="planner-grid" id="plannerGrid"></div></section>
-      <section class="view" id="mastery"><div class="section-intro compact"><p class="eyebrow">MASTERY</p><h2>Evidence, not vibes.</h2><p>Confidence changes when you retrieve, apply and score—not because you clicked “read”.</p></div><div class="mastery-summary" id="masterySummary"></div><article class="panel mastery-panel"><div class="panel-head"><div><p class="eyebrow">TOPIC MASTERY</p><h3>Across all specifications</h3></div><div class="legend"><span><i class="dot weak"></i>Weak</span><span><i class="dot building"></i>Building</span><span><i class="dot secure"></i>Secure</span></div></div><div id="masteryRows" class="mastery-rows"></div></article></section>
-    </main>
-  </div>
-
-  <div class="modal-backdrop" id="tutorModal" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="tutorModalTitle"><div class="modal-head"><div><p class="eyebrow">PLANNER</p><h3 id="tutorModalTitle">Add tutor session</h3></div><button class="drawer-close" id="closeTutorModal" aria-label="Close">×</button></div><form id="tutorForm"><input type="hidden" id="tutorId"><div class="form-grid"><label class="field full"><span>Tutor / session name</span><input id="tutorName" required placeholder="e.g. Sarah · History"></label><label class="field"><span>Subject</span><select id="tutorSubject"><option>History</option><option>English Language</option><option>Religious Studies</option><option>General</option></select></label><label class="field"><span>Date</span><input id="tutorDate" type="date" required></label><label class="field"><span>Start</span><input id="tutorStart" type="time" required></label><label class="field"><span>Duration</span><select id="tutorDuration"><option value="30">30 min</option><option value="45">45 min</option><option value="60" selected>60 min</option><option value="90">90 min</option><option value="120">120 min</option></select></label><label class="field full"><span>Location or video link</span><input id="tutorLocation" placeholder="Optional"></label><label class="field full"><span>Notes</span><textarea id="tutorNotes" rows="3" placeholder="What to cover, homework, questions…"></textarea></label><label class="field full" id="repeatField"><span>Repeat</span><select id="tutorRepeat"><option value="1">One session</option><option value="4">Weekly · 4 sessions</option><option value="8">Weekly · 8 sessions</option><option value="12">Weekly · 12 sessions</option></select></label></div><div class="modal-actions"><button type="button" class="danger-btn" id="deleteTutor" hidden>Delete</button><div class="modal-actions-right"><button type="button" class="small-btn ghostish" id="cancelTutor">Cancel</button><button type="submit" class="primary-btn">Save session</button></div></div></form></div></div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=5001"></script>
-  <script>
-  (function(){
-    function updateHeader(){const d=new Date(),dateEl=document.getElementById('headerDate');if(dateEl)dateEl.textContent=new Intl.DateTimeFormat('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(d)}
-    function updateCountdown(){const target=new Date('2027-05-17T09:00:00');let diff=Math.max(0,target-Date.now());const days=Math.floor(diff/86400000);diff%=86400000;const hours=Math.floor(diff/3600000);diff%=3600000;const minutes=Math.floor(diff/60000);diff%=60000;const seconds=Math.floor(diff/1000);const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=String(val).padStart(2,'0')};set('daysToSeason',days);set('countHours',hours);set('countMinutes',minutes);set('countSeconds',seconds)}
-    updateHeader();updateCountdown();setInterval(updateCountdown,1000);
-    window.addEventListener('load',function(){const img=document.getElementById('charlesHeroImage');if(!img||!img.complete||img.naturalWidth<100){const e=document.createElement('div');e.id='assetFailure';e.textContent='Artwork failed to load';e.style.cssText='position:fixed;right:16px;bottom:16px;z-index:99999;background:#7a251d;color:white;padding:10px 14px;border-radius:6px;font:12px system-ui';document.body.appendChild(e)}});
-  })();
-  </script>
+<div class="modal" id="tutorModal" hidden><form id="tutorForm" class="modal-card"><button type="button" class="x" id="closeTutorModal">×</button><div class="eyebrow">PLANNER</div><h3>Add tutor session</h3><input id="tutorId" type="hidden"><label>Name<input id="tutorName" required placeholder="e.g. Sarah · History"></label><label>Subject<select id="tutorSubject"><option>History</option><option>English Language</option><option>Religious Studies</option><option>General</option></select></label><div class="two"><label>Date<input id="tutorDate" type="date" required></label><label>Start<input id="tutorStart" type="time" value="17:00" required></label></div><label>Duration<select id="tutorDuration"><option value="30">30 min</option><option value="45">45 min</option><option value="60" selected>60 min</option><option value="90">90 min</option></select></label><div class="modal-actions"><button type="button" class="ghost" id="cancelTutor">Cancel</button><button type="submit">Save session</button></div></form></div>
+<div class="toast" id="toast"></div>
+<script src="app-clean.js?v=6000" defer></script>
 </body>
 </html>
