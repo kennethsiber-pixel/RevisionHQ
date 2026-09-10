@@ -2,27 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": false,
   "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/assets/hero.svg",
-      "destination": "/assets/charles-i-hero.webp"
-    },
-    {
-      "source": "/assets/campus.svg",
-      "destination": "/assets/campus-premium.webp"
-    },
-    {
-      "source": "/app.js",
-      "destination": "https://raw.githubusercontent.com/kennethsiber-pixel/RevisionHQ/37b40a2c92d73a90aad9734eb51b0bf15a3e9fe8/app.js"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         {"key":"X-Content-Type-Options","value":"nosniff"},
-        {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},
-        {"key":"Cache-Control","value":"no-cache, no-store, must-revalidate"}
+        {"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"}
       ]
     }
   ]
