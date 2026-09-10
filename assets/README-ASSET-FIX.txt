@@ -1,0 +1,1 @@
+Image assets are served directly by Vercel rewrites. Do not wrap raster assets inside SVG <image> elements for Safari compatibility.
