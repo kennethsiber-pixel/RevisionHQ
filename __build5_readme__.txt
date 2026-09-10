@@ -1,0 +1,1 @@
+Revision HQ Build 5 clean release candidate. Critical artwork uses explicit HTML img elements; CSS is merged; app.js loads directly; no asset or JS rewrites.
