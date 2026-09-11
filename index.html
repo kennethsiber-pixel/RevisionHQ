@@ -14,7 +14,7 @@ const frame=document.getElementById('rhq');
 frame.addEventListener('load',()=>{
   const d=frame.contentDocument;if(!d)return;
   if(!d.querySelector('link[data-mission-layer]')){const l=d.createElement('link');l.rel='stylesheet';l.href='/mission.css?v=1010';l.dataset.missionLayer='1';d.head.appendChild(l)}
-  if(!d.querySelector('script[data-mission-layer]')){const s=d.createElement('script');s.src='/mission.js?v=1010';s.async=false;s.dataset.missionLayer='1';d.body.appendChild(s)}
+  if(!d.querySelector('script[data-mission-layer]')){const s=d.createElement('script');s.src='/mission.js?v=1011';s.async=false;s.dataset.missionLayer='1';d.body.appendChild(s)}
 });
 </script>
 </body>
